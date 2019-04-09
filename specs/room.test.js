@@ -19,11 +19,6 @@ describe('room', () => {
   test('room should be able to be painted', () => {
     room.bePainted();
     expect(room.painted).toBe(true);
-  })
+  });
 
 });
-
-
-// test('can should have a number of litres of paint', () => {
-  //   expect(can._volume).toBe(5);
-  // });
