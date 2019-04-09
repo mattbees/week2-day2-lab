@@ -1,4 +1,4 @@
-const paintCan = require('../paint_can');
+const PaintCan = require('../paint_can');
 
 describe('paint can', () => {
 
@@ -6,23 +6,21 @@ describe('paint can', () => {
   // create vars
 
   beforeEach( () => {
-    can.volume = 5; // Delete this
-    // instantiate variable
+    can = new PaintCan();
   });
 
+  // Is it appropriate to test this property directly?
   test('can should have a number of litres of paint', () => {
-    expect(can.volume).toBe(5);
+    expect(can._volume).toBe(5);
   });
 
   test('can should be able to check if it is empty', () => {
-    expect(can.volume()).toBe(5);  // getter
+    expect(can.volume).toBe(5);  // getter
   });
 
   test('can should be able to empty itself', () => {
     can.runOut();
     expect(can.volume).toBe(0);
-  })
-
-
+  });
 
 });
