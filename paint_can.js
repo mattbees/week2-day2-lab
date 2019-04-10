@@ -8,6 +8,12 @@ class PaintCan {
     return this._volume;
   };
 
+  set volume(num) {
+    if (num <= 5) {
+      this._volume = num;
+    };
+  };
+
   runOut() {
     this._volume = 0;
   };
